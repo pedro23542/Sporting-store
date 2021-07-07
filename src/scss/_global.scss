@@ -16,12 +16,16 @@ li{
   padding: 0;
   list-style: none;
 }
+h1,h2,h3,h4,h5,h6{
+  margin: 0;
+}
 body{
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
+  font-size: 12px;
 }
 .container{
-  max-width: 1200px;
+  max-width: 1170px;
   margin: 0 auto;
   padding: 0 15px;
 }

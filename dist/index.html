@@ -8,7 +8,7 @@
 	<title>Document</title>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Play:wght@700&family=Roboto:wght@300;400;900&display=swap"
+	<link href="https://fonts.googleapis.com/css2?family=Play:wght@700&family=Roboto:wght@300;400;700;900&display=swap"
 		rel="stylesheet">
 	<link rel="stylesheet" href="css/style.min.css">
 </head>
@@ -21,51 +21,67 @@
 				<nav class="header__nav">
 					<ul class="header__nav-list">
 						<li class="header__nav-li">
-							<a class="header__nav-link" href="#"></a>
-							<a class="header__nav-link" href="#"></a>
-							<a class="header__nav-link" href="#"></a>
-							<a class="header__nav-link" href="#"></a>
-							<a class="header__nav-link" href="#"></a>
-							<a class="header__nav-link" href="#"></a>
+							<a class="header__nav-link" href="#">Бренды</a>							
+						</li>
+						<li class="header__nav-li">
+							<a class="header__nav-link" href="#">Распродажа</a>
+						</li>
+						<li class="header__nav-li">
+							<a class="header__nav-link" href="#">Доставка и Сборка</a>
+						</li>
+						<li class="header__nav-li">
+							<a class="header__nav-link" href="#">Гарантия</a>
+						</li>
+						<li class="header__nav-li">
+							<a class="header__nav-link" href="#">Оплата</a>
+						</li>
+						<li class="header__nav-li">
+							<a class="header__nav-link" href="#">Контакты</a>
 						</li>
 					</ul>
 				</nav>
 				<a class="header__logo" href="#">
-					<span>Logo</span>
-					<span>спортивный магазин</span>
+					<img src="images/logo.png" alt="Логотип">
 				</a>
 				<div class="header__phones">
+					<div class="header__phones-inner">
 					<div class="header__phones-item header__phones-item--img">
 						<span class="header__phones-title">Москва</span>
 						<a class="header__phones-num" href="tel:+84991234567">8-499-123-45-67</a>
 					</div>
+				</div>
+				<div class="header__phones-inner">
 					<div class="header__phones-item">
 						<span class="header__phones-title">Бесплатно для России</span>
 						<a class="header__phones-num" href="tel:+84991234567">8-800-123-45-67</a>
 					</div>
 				</div>
+				</div>
 			</div>
 			<div class="header__row header__row-extra">
 				<div class="header__links">
 					<a href="#" class="header__link">
-						<img src="images/key.png" alt="key icon">
+						<img src="images/icons/key.png" alt="key icon">
 						<span>Вход</span>
 					</a>
 					<a href="#" class="header__link">
-						<img src="images/face.png" alt="reg icon">
+						<img src="images/icons/face.png" alt="reg icon">
 						<span>Регистрация</span>
 					</a>
 					<a href="mailto:sport@gmail.com" class="header__link">
-						<img src="images/mail.png" alt="mail icon">
+						<img src="images/icons/mail.png" alt="mail icon">
 						<span>sport@gmail.com</span>
 					</a>
 				</div>
-				<div class="header__links">
-					<a href="#" class="header__link">
-						<img src="images/blue-phone.png" alt="mail icon">
+				<div class="header__links header__links--extra">
+					<a href="#" class="header__link header__link--clallback">
+						<img src="images/icons/blue_phone.png" alt="mail icon">
 						<span>Обратный звонок</span>
 					</a>
 					<div class="header__date">
+						<div class="header__date-img">
+							<img src="images/content/date.png" alt="дата">
+						</div>
 						<ul class="header__date-list">
 							<li>
 								<span class="header__date-day">Пн–Пт:</span>
@@ -77,34 +93,304 @@
 							</li>
 						</ul>
 					</div>
-					<div class="header__cart">
+					<a class="header__cart" href="#">
 						<div class="header__cart-quantity">12</div>
-					</div>
+					</a>
 				</div>
 			</div>
 		</div>
 	</header>
-	
+
 	<main class="main">
-		<div class="main__inner">
-			<nav class="aside-menu">
-				<div class="aside-menu__title">
-					<span>Каталог товаров</span>
-					<div class="cross-btn"></div>
-				</div>
-				<ul class="aside-menu__list">
-					<li class="aside-menu__item">
-						<a class="aside-menu__link aside-menu__open-link" href="#"></a>
-						<div class="aside-exstra">
-							<ul class="aside-exstra__list">
-								<li class="aside-exstra__item">
-									
-								</li>
-							</ul>
+		<div class="container">
+			<div class="main__inner">
+				<nav class="aside-menu">
+					<div class="aside-menu__title">
+						<span>Каталог товаров</span>
+						<div class="aside-menu__btn">
+							<span></span>
+							<span></span>
+							<span></span>
 						</div>
-					</li>
-				</ul>
-			</nav>
+					</div>
+					<ul class="aside-menu__list">
+						<li class="aside-menu__item">
+							<a class="aside-menu__link aside-menu__open-link" href="#">
+								Беговые дорожки
+							</a>
+							<div class="aside-exstra">
+								<ul class="aside-exstra__list">
+									<li class="aside-exstra__item">
+										<a class="aside-exstra__link" href="#">
+											Велосипедный
+										</a>
+									</li>
+									<li class="aside-exstra__item">
+										<a class="aside-exstra__link" href="#">
+											Для помещеий
+										</a>
+									</li>
+									<li class="aside-exstra__item">
+										<a class="aside-exstra__link" href="#">
+											Профессиональнй
+										</a>
+									</li>
+									<li class="aside-exstra__item">
+										<a class="aside-exstra__link" href="#">
+											Любительский
+										</a>
+									</li>
+								</ul>
+								<div class="aside-exstra__product">
+									<span class="aside-exstra__top-day">Товар дня</span>
+									<a class="aside-exstra__product-inner" href="#">
+										<div class="aside-exstra__img">
+											<img src="images/content/table.jpg" alt="Домашний теннисный стол Donic Indoor Roller 800 Green">
+										</div>
+										<h3 class="aside-extra__product-title">
+											Домашний теннисный стол Donic Indoor Roller 800 Green
+										</h3>
+									</a>
+									<div class="aside-exstra__product-price">
+										<button class="aside-exstra__product-cartbtn"><img src="images/icons/white_cart_button.png"
+												alt="Кнопка корзины"></button>
+										<span>64 990</span>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="aside-menu__item">
+							<a class="aside-menu__link aside-menu__open-link" href="#">
+								Эллептические тренажоры
+							</a>
+							<div class="aside-exstra">
+								<ul class="aside-exstra__list">
+									<li class="aside-exstra__item">
+										<a class="aside-exstra__link" href="#">
+											Велосипедный
+										</a>
+									</li>
+									<li class="aside-exstra__item">
+										<a class="aside-exstra__link" href="#">
+											Для помещеий
+										</a>
+									</li>
+									<li class="aside-exstra__item">
+										<a class="aside-exstra__link" href="#">
+											Профессиональнй
+										</a>
+									</li>
+									<li class="aside-exstra__item">
+										<a class="aside-exstra__link" href="#">
+											Любительский
+										</a>
+									</li>
+								</ul>
+								<div class="aside-exstra__product">
+									<span class="aside-exstra__top-day">Товар дня</span>
+									<a class="aside-exstra__product-inner" href="#">
+										<div class="aside-exstra__img">
+											<img src="images/content/table.jpg" alt="Домашний теннисный стол Donic Indoor Roller 800 Green">
+										</div>
+										<h3 class="aside-extra__product-title">
+											Домашний теннисный стол Donic Indoor Roller 800 Green
+										</h3>
+									</a>
+									<div class="aside-exstra__product-price">
+										<button class="aside-exstra__product-cartbtn"><img src="images/icons/white_cart_button.png"
+												alt="Кнопка корзины"></button>
+										<span>64 990</span>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="aside-menu__item">
+							<a class="aside-menu__link" href="#">
+								Веллотренажеры
+							</a>
+						</li>
+						<li class="aside-menu__item">
+							<a class="aside-menu__link" href="#">
+								Гребные тренажеры
+							</a>
+						</li>
+						<li class="aside-menu__item">
+							<a class="aside-menu__link aside-menu__open-link" href="#">
+								Тенесные столы
+							</a>
+							<div class="aside-exstra">
+								<ul class="aside-exstra__list">
+									<li class="aside-exstra__item">
+										<a class="aside-exstra__link" href="#">
+											Велосипедный
+										</a>
+									</li>
+									<li class="aside-exstra__item">
+										<a class="aside-exstra__link" href="#">
+											Для помещеий
+										</a>
+									</li>
+									<li class="aside-exstra__item">
+										<a class="aside-exstra__link" href="#">
+											Профессиональнй
+										</a>
+									</li>
+									<li class="aside-exstra__item">
+										<a class="aside-exstra__link" href="#">
+											Любительский
+										</a>
+									</li>
+								</ul>
+								<div class="aside-exstra__product">
+									<span class="aside-exstra__top-day">Товар дня</span>
+									<a class="aside-exstra__product-inner" href="#">
+										<div class="aside-exstra__img">
+											<img src="images/content/table.jpg" alt="Домашний теннисный стол Donic Indoor Roller 800 Green">
+										</div>
+										<h3 class="aside-extra__product-title">
+											Домашний теннисный стол Donic Indoor Roller 800 Green
+										</h3>
+									</a>
+									<div class="aside-exstra__product-price">
+										<button class="aside-exstra__product-cartbtn"><img src="images/icons/white_cart_button.png"
+												alt="Кнопка корзины"></button>
+										<span>64 990 <span class="ruble-sign">₽</span></span>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="aside-menu__item">
+							<a class="aside-menu__link" href="#">
+								Гребные тренажеры
+							</a>
+						</li>
+						<li class="aside-menu__item">
+							<a class="aside-menu__link" href="#">
+								Вибромассажеры
+							</a>
+						</li>
+						<li class="aside-menu__item">
+							<a class="aside-menu__link" href="#">
+								Теннисные столы
+							</a>
+						</li>
+						<li class="aside-menu__item">
+							<a class="aside-menu__link" href="#">
+								Баскетбол
+							</a>
+						</li>
+						<li class="aside-menu__item">
+							<a class="aside-menu__link" href="#">
+								Массажные кресла
+							</a>
+						</li>
+						<li class="aside-menu__item">
+							<a class="aside-menu__link" href="#">
+								Силовые тренажеры
+							</a>
+						</li>
+						<li class="aside-menu__item">
+							<a class="aside-menu__link" href="#">
+								Батуты
+							</a>
+						</li>
+					</ul>
+				</nav>
+				<section class="slider">
+					<div class="main-search">
+						<div class="main-search__inner">
+						<button class="main-search__type">
+							<img src="images/icons/search.png" alt="search icon">
+							<span class="main-search__type-name">Везде</span>
+							<img src="images/search_down_arrow.png" alt="arrow down">
+						</button>
+						<input class="main-search__input" type="text">
+						<button class="main-search__btn">Найти</button>
+						</div>
+						<div class="main-search__sublinks">
+							<div class="main-search__sublinks-col">
+								<ul class="main-search__sublinks-list">
+									<li class="main-search__sublinks-item">
+										Беговые дорожки
+									</li>
+									<li class="main-search__sublinks-item">
+										Эллиптические тренажеры
+									</li>
+									<li class="main-search__sublinks-item">
+										Велотренажеры
+									</li>
+									<li class="main-search__sublinks-item">
+										Гребные тренажеры
+									</li>
+									<li class="main-search__sublinks-item">
+										Вибромассажеры
+									</li>
+								</ul>
+							</div>
+							<div class="main-search__sublinks-col">
+								<ul class="main-search__sublinks-list">
+									<li class="main-search__sublinks-item">
+										Беговые дорожки
+									</li>
+									<li class="main-search__sublinks-item">
+										Эллиптические тренажеры
+									</li>
+									<li class="main-search__sublinks-item">
+										Велотренажеры
+									</li>
+									<li class="main-search__sublinks-item">
+										Гребные тренажеры
+									</li>
+									<li class="main-search__sublinks-item">
+										Вибромассажеры
+									</li>
+								</ul>
+							</div>
+							<div class="main-search__sublinks-col">
+								<ul class="main-search__sublinks-list">
+									<li class="main-search__sublinks-item">
+										Беговые дорожки
+									</li>
+									<li class="main-search__sublinks-item">
+										Эллиптические тренажеры
+									</li>
+									<li class="main-search__sublinks-item">
+										Велотренажеры
+									</li>
+									<li class="main-search__sublinks-item">
+										Гребные тренажеры
+									</li>
+									<li class="main-search__sublinks-item">
+										Вибромассажеры
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="slider-content">
+						<div class="swiper-container">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<a class="slider-content__link" href="#">
+										<img src="images/content/slide1.jpg" alt="слайд1">
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a class="slider-content__link" href="#">
+										<img src="images/content/slide1.jpg" alt="слайд2">
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a class="slider-content__link" href="#">
+										<img src="images/content/slide1.jpg" alt="слайд3">
+									</a>
+								</div>
+							</div>
+							<div class="swiper-pagination"></div>	
+						</div>
+					</div>
+				</section>
+			</div>
 		</div>
 	</main>
 

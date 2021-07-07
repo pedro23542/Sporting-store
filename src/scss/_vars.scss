@@ -1,0 +1,32 @@
+$white: #ffffff;
+$blue: #1ab9ce;
+$grey: #999999;
+$orange: #f68038;
+$black: #333333;
+
+@mixin f300 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
+
+@mixin f400 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
+@mixin f700 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+}
+
+
+@mixin f900 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 900;
+}
+
+@mixin Play700 {
+  font-family: 'Play', sans-serif;
+  font-weight: 700;
+}
+
+
