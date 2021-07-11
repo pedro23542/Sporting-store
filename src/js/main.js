@@ -1,4 +1,4 @@
 
-import test from './modules/one';
+import sliders from './modules/sliders';
 
-test();
+sliders();
