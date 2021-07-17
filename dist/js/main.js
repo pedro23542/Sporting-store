@@ -1186,7 +1186,19 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _esm
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_sliders__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/sliders */ \"./src/js/modules/sliders.js\");\n\nObject(_modules_sliders__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\n\n//# sourceURL=webpack:///./src/js/main.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_sliders__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/sliders */ \"./src/js/modules/sliders.js\");\n/* harmony import */ var _modules_accordions__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/accordions */ \"./src/js/modules/accordions.js\");\n\n\nObject(_modules_sliders__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\nObject(_modules_accordions__WEBPACK_IMPORTED_MODULE_1__[\"default\"])('.aside-menu__title', '.aside-menu__list');\nObject(_modules_accordions__WEBPACK_IMPORTED_MODULE_1__[\"default\"])('.main-search__type', '.main-search__sublinks');\n\n//# sourceURL=webpack:///./src/js/main.js?");
+
+/***/ }),
+
+/***/ "./src/js/modules/accordions.js":
+/*!**************************************!*\
+  !*** ./src/js/modules/accordions.js ***!
+  \**************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\nvar accordions = function accordions(trigerBtn, content) {\n  var triger = document.querySelector(trigerBtn);\n  var body = document.querySelector(content);\n  console.log(triger, body);\n  triger.addEventListener('click', function () {\n    body.classList.toggle('open');\n\n    if (body.classList.contains('open')) {\n      body.style.maxHeight = body.scrollHeight + 'px';\n    } else {\n      body.style.maxHeight = null;\n    }\n  });\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (accordions);\n\n//# sourceURL=webpack:///./src/js/modules/accordions.js?");
 
 /***/ }),
 
@@ -1198,7 +1210,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _mod
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var swiper_bundle__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper/bundle */ \"./node_modules/swiper/swiper-bundle.esm.js\");\n\n\nvar sliders = function sliders() {\n  var mainSlider = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__[\"default\"]('.main-slider__container', {\n    slidesPerView: 1,\n    spaceBetween: 0,\n    centeredSlides: true\n  }); //mainSlider pagination logic\n\n  var slides = document.querySelectorAll('.main-slider__slide');\n  var paginationBody = document.querySelector('.main-slider__pagination');\n  slides.forEach(function (elem, index) {\n    paginationBody.insertAdjacentHTML('beforeend', \"<div class=\\\"main-slider__pagination-item\\\" data-index=\\\"\".concat(index, \"\\\">\").concat(index + 1, \"</div>\"));\n  });\n  var bulets = document.querySelectorAll('.main-slider__pagination-item');\n  bulets[0].classList.add('main-slider__pagination--active');\n  bulets.forEach(function (elem, index) {\n    elem.style.backgroundImage = \"url(images/content/slide\".concat(index + 1, \".jpg)\");\n    elem.addEventListener('click', function () {});\n  });\n  var brandsSlider = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__[\"default\"]('.brands-labels__container', {\n    slidesPerView: 5,\n    centeredSlides: true,\n    centeredSlidesBounds: true,\n    navigation: {\n      nextEl: '.brands-labels__button-prev',\n      prevEl: '.brands-labels__button-next'\n    }\n  });\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (sliders);\n\n//# sourceURL=webpack:///./src/js/modules/sliders.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var swiper_bundle__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper/bundle */ \"./node_modules/swiper/swiper-bundle.esm.js\");\n\n\nvar sliders = function sliders() {\n  var mainSlider = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__[\"default\"]('.main-slider__container', {\n    slidesPerView: 1,\n    spaceBetween: 0,\n    centeredSlides: true\n  }); //mainSlider pagination logic\n\n  var slides = document.querySelectorAll('.main-slider__slide');\n  var paginationBody = document.querySelector('.main-slider__pagination');\n  slides.forEach(function (elem, index) {\n    paginationBody.insertAdjacentHTML('beforeend', \"<div class=\\\"main-slider__pagination-item\\\" data-index=\\\"\".concat(index, \"\\\">\").concat(index + 1, \"</div>\"));\n  });\n  var bulets = document.querySelectorAll('.main-slider__pagination-item');\n  bulets[0].classList.add('main-slider__pagination--active');\n  bulets.forEach(function (elem, index) {\n    elem.style.backgroundImage = \"url(images/content/slide\".concat(index + 1, \".jpg)\");\n    elem.addEventListener('click', function (e) {\n      var self = e.currentTarget;\n      bulets.forEach(function (elem) {\n        elem.classList.remove('main-slider__pagination--active');\n      });\n      self.classList.add('main-slider__pagination--active');\n      mainSlider.slideTo(self.getAttribute('data-index'));\n    });\n  });\n  var brandsSlider = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__[\"default\"]('.brands-labels__container', {\n    slidesPerView: 5,\n    centeredSlides: true,\n    centeredSlidesBounds: true,\n    navigation: {\n      nextEl: '.brands-labels__button-prev',\n      prevEl: '.brands-labels__button-next'\n    }\n  });\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (sliders);\n\n//# sourceURL=webpack:///./src/js/modules/sliders.js?");
 
 /***/ })
 

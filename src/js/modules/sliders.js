@@ -23,8 +23,15 @@ const sliders = () => {
 
   bulets.forEach((elem, index) => {
     elem.style.backgroundImage = `url(images/content/slide${index+1}.jpg)`;
-    elem.addEventListener('click', () => {
-      
+    elem.addEventListener('click', (e) => {
+
+      const self = e.currentTarget;
+      bulets.forEach( elem => {
+        elem.classList.remove('main-slider__pagination--active');
+      });
+      self.classList.add('main-slider__pagination--active');
+      mainSlider.slideTo(self.getAttribute('data-index'));
+  
     });
   });
 
