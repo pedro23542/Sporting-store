@@ -17,48 +17,58 @@
 <body>
 
 	<header class="header">
-		<div class="container">
-			<div class="header__row">
-				<nav class="header__nav">
-					<ul class="header__nav-list">
-						<li class="header__nav-li">
-							<a class="header__nav-link" href="#">Бренды</a>
-						</li>
-						<li class="header__nav-li">
-							<a class="header__nav-link" href="#">Распродажа</a>
-						</li>
-						<li class="header__nav-li">
-							<a class="header__nav-link" href="#">Доставка и Сборка</a>
-						</li>
-						<li class="header__nav-li">
-							<a class="header__nav-link" href="#">Гарантия</a>
-						</li>
-						<li class="header__nav-li">
-							<a class="header__nav-link" href="#">Оплата</a>
-						</li>
-						<li class="header__nav-li">
-							<a class="header__nav-link" href="#">Контакты</a>
-						</li>
-					</ul>
-				</nav>
-				<a class="header__logo" href="#">
-					<img src="images/logo.png" alt="Логотип">
-				</a>
-				<div class="header__phones">
-					<div class="header__phones-inner">
-						<div class="header__phones-item header__phones-item--img">
-							<span class="header__phones-title">Москва</span>
-							<a class="header__phones-num" href="tel:+84991234567">8-499-123-45-67</a>
+		<div class="header__inner">
+			<div class="container">
+				<div class="header__row">
+					<button class="header__mobile-btn">
+						<div></div>
+						<div></div>
+						<div></div>
+					</button>
+					<nav class="header__nav">
+						<div class="header__nav-mobile-cross">&#10006;</div>
+						<ul class="header__nav-list">
+							<li class="header__nav-li">
+								<a class="header__nav-link" href="#">Бренды</a>
+							</li>
+							<li class="header__nav-li">
+								<a class="header__nav-link" href="#">Распродажа</a>
+							</li>
+							<li class="header__nav-li">
+								<a class="header__nav-link" href="#">Доставка и Сборка</a>
+							</li>
+							<li class="header__nav-li">
+								<a class="header__nav-link" href="#">Гарантия</a>
+							</li>
+							<li class="header__nav-li">
+								<a class="header__nav-link" href="#">Оплата</a>
+							</li>
+							<li class="header__nav-li">
+								<a class="header__nav-link" href="#">Контакты</a>
+							</li>
+						</ul>
+					</nav>
+					<a class="header__logo" href="#">
+						<img src="images/logo.png" alt="Логотип">
+					</a>
+					<div class="header__phones">
+						<div class="header__phones-inner">
+							<div class="header__phones-item header__phones-item--img">
+								<span class="header__phones-title">Москва</span>
+								<a class="header__phones-num" href="tel:+84991234567">8-499-123-45-67</a>
+							</div>
 						</div>
-					</div>
-					<div class="header__phones-inner">
-						<div class="header__phones-item">
-							<span class="header__phones-title">Бесплатно для России</span>
-							<a class="header__phones-num" href="tel:+84991234567">8-800-123-45-67</a>
+						<div class="header__phones-inner">
+							<div class="header__phones-item">
+								<span class="header__phones-title">Бесплатно для России</span>
+								<a class="header__phones-num" href="tel:+84991234567">8-800-123-45-67</a>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
+		</div>
+		<div class="container">
 			<div class="header__row header__row-extra">
 				<div class="header__links">
 					<a href="#" class="header__link header__link--enter">
@@ -101,7 +111,7 @@
 			</div>
 		</div>
 	</header>
-<!--
+	
 	<main class="main">
 		<div class="container">
 			<div class="main__inner">
@@ -109,7 +119,7 @@
 				<div class="main__aside">
 					<nav class="aside-menu">
 						<div class="aside-menu__title">
-							<span>Каталог товаров</span>
+							<span class="aside-menu__span">Каталог товаров</span>
 							<div class="aside-menu__btn">
 								<span></span>
 								<span></span>
@@ -117,7 +127,7 @@
 							</div>
 						</div>
 						<ul class="aside-menu__list">
-							<li class="aside-menu__item">
+							<li class="aside-menu__item aside-menu__item--triger">
 								<a class="aside-menu__link aside-menu__open-link" href="#">
 									Беговые дорожки
 								</a>
@@ -447,25 +457,24 @@
 							<div class="main-slider__container swiper-container">
 								<div class="swiper-wrapper">
 									<div class="main-slider__slide swiper-slide">
-										<a class="slider-content__link" href="#">
+				
 											<img src="images/content/slide1.jpg" alt="слайд1">
-										</a>
+							
 									</div>
-									<div class="main-slider__slide swiper-slide">
-										<a class="slider-content__link" href="#">
+									<a class="main-slider__slide swiper-slide" href="#">
+						
 											<img src="images/content/slide2.jpg" alt="слайд2">
-										</a>
-									</div>
+								
+									</a>
 									<div class="main-slider__slide swiper-slide">
-										<a class="slider-content__link" href="#">
+									
 											<img src="images/content/slide3.jpg" alt="слайд3">
-										</a>
+								
 									</div>
 								</div>
 							</div>
 						</div>
-						<div class="main-slider__pagination">
-						
+						<div class="main-slider__pagination">			
 						</div>
 					</section>
 
@@ -754,7 +763,6 @@
 						</div>
 					</section>
 				</div>
-
 			</div>
 		</div>
 	</main>
@@ -862,7 +870,7 @@
 			</div>
 		</div>
 	</section>
-	
+
 	<footer class="footer">
 		<div class="footer__links">
 			<div class="container">
@@ -985,7 +993,7 @@
 			</div>
 		</div>
 	</footer>
-	-->
+
 	<script src="js/main.js"></script>
 </body>
 

@@ -36,17 +36,35 @@ const sliders = () => {
   });
 
 
-
   const brandsSlider = new Swiper('.brands-labels__container', {
     slidesPerView: 5,
-    centeredSlides: true,
     centeredSlidesBounds: true,
     navigation: {
       nextEl: '.brands-labels__button-prev',
       prevEl: '.brands-labels__button-next',
     },
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+      },
+      450: {
+        slidesPerView: 2,
+        centeredSlides: false,
+      },
+      600: {
+        slidesPerView: 3,
+        centeredSlides: false,
+      },
+      840: {
+        slidesPerView: 4,
+        centeredSlides: false,
+      },
+      1000: {
+        slidesPerView: 5,
+        centeredSlides: false,
+      },
+    }
   });
-
 
 
 };
