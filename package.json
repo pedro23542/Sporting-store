@@ -21,7 +21,9 @@
     "webpack-stream": "^6.1.2"
   },
   "dependencies": {
+    "choices.js": "^9.0.1",
     "normalize.css": "^8.0.1",
+    "nouislider": "^15.2.0",
     "swiper": "^6.7.5"
   }
 }

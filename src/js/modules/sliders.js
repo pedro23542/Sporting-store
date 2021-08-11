@@ -8,34 +8,36 @@ const sliders = () => {
   });
 
   //mainSlider pagination logic
-  const slides = document.querySelectorAll('.main-slider__slide');
-  const paginationBody = document.querySelector('.main-slider__pagination');
-  
-  slides.forEach((elem, index) => {
-    paginationBody.insertAdjacentHTML(
-      'beforeend', 
-      `<div class="main-slider__pagination-item" data-index="${index}">${index + 1}</div>`
-      );
-  });
-
-  const bulets =  document.querySelectorAll('.main-slider__pagination-item');
-  bulets[0].classList.add('main-slider__pagination--active');
-
-  bulets.forEach((elem, index) => {
-    elem.style.backgroundImage = `url(images/content/slide${index+1}.jpg)`;
-    elem.addEventListener('click', (e) => {
-
-      const self = e.currentTarget;
-      bulets.forEach( elem => {
-        elem.classList.remove('main-slider__pagination--active');
-      });
-      self.classList.add('main-slider__pagination--active');
-      mainSlider.slideTo(self.getAttribute('data-index'));
-  
+  try {
+    const slides = document.querySelectorAll('.main-slider__slide');
+    const paginationBody = document.querySelector('.main-slider__pagination');
+    
+    slides.forEach((elem, index) => {
+      paginationBody.insertAdjacentHTML(
+        'beforeend', 
+        `<div class="main-slider__pagination-item" data-index="${index}">${index + 1}</div>`
+        );
     });
-  });
-
-
+  
+    const bulets =  document.querySelectorAll('.main-slider__pagination-item');
+    bulets[0].classList.add('main-slider__pagination--active');
+  
+    bulets.forEach((elem, index) => {
+      elem.style.backgroundImage = `url(images/content/slide${index+1}.jpg)`;
+      elem.addEventListener('click', (e) => {
+  
+        const self = e.currentTarget;
+        bulets.forEach( elem => {
+          elem.classList.remove('main-slider__pagination--active');
+        });
+        self.classList.add('main-slider__pagination--active');
+        mainSlider.slideTo(self.getAttribute('data-index'));
+    
+      });
+    });
+  } catch (e) {}
+ 
+  
   const brandsSlider = new Swiper('.brands-labels__container', {
     slidesPerView: 5,
     centeredSlidesBounds: true,
@@ -64,6 +66,12 @@ const sliders = () => {
         centeredSlides: false,
       },
     }
+  });
+
+  const productOne = new Swiper('.product-one__slider', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    centeredSlides: true,
   });
 
 

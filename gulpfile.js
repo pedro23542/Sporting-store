@@ -65,7 +65,7 @@ gulp.task('browser-sync', function() {
 
 
 gulp.task('watch', function(){
-  gulp.watch('src/scss/**/*.scss', gulp.parallel('scss'));
+  gulp.watch('src/scss/**/*.scss', {delay: 1500}, gulp.parallel('scss'));
   gulp.watch('src/*.html', gulp.parallel('html'));
   gulp.watch('src/js/**/*.js', gulp.parallel('script'));
   gulp.watch('src/images/**/*.*', gulp.parallel('img'));
