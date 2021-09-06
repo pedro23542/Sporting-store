@@ -57,6 +57,9 @@
     padding-bottom: 32px;
     margin-bottom: 14px;
   }
+  .product-one__box:first-child{
+    margin-right: 15px;
+  }
 }
 @media (max-width: 990px) {
   .header{
@@ -183,6 +186,9 @@
   .aside-menu__item.aside-menu__item--triger:hover .aside-exstra{
     transform: translateX(0);
   }
+  .filters{
+    margin-bottom: 20px;
+  }
 }
 @media (max-width: 850px){
   .footer__links-inner{
@@ -213,6 +219,47 @@
   }
   .big-title{
     font-size: 20px;
+  }
+  .pagination-extra{
+    justify-content: center;
+    overflow-x: scroll;
+  }
+  .pagination-extra__inner{
+    display: none;
+  }
+  .products__items.products__items-list-view{
+    .products__item{
+      flex-direction: column;
+    }
+    .products__item-content{
+      display: block;
+      padding: 10px;
+    }
+    .products__item-inner{
+      display: block;
+    }
+    .products__item-title{
+      margin-bottom: 10px;
+    }
+
+    .products__item-price-inner{
+      text-align: left;
+      margin: 0;
+    }
+    .products__item-cartbtn-wrapper{
+      position: static;
+      padding: 0;
+    }
+    .products__item-cartbtn{
+      margin: 0;
+    }
+  }
+  .include__icons{
+    justify-content: space-between;
+    width: 100%;
+  }
+  .include__icon:not(:last-child){
+    margin-right: 0;
   }
 }
 
@@ -247,7 +294,27 @@
   .main-search__sublinks-col{
     padding: 0;
   }
-  
+  .product-one__content{
+    flex-direction: column;
+    justify-content: center;
+  }
+  .product-one__box:first-child{
+    margin-right: 0;
+  }
+  .product-one__slidernav{
+    justify-content: space-around;
+  }
+  .tabs__switchers{
+    display: flex;
+    overflow-x: scroll;
+  }
+  .tabs__item{
+    width: 100%;
+    overflow-x: scroll;
+  }
+  .characteristics{
+    width: 100%;
+  }
 }
 
 @media (max-width: 550px) {
@@ -283,5 +350,17 @@
   }
   .about__inner{
     padding: 20px;
+  }
+  .products__view-filter-title{
+    display: none;
+  }
+  .main-search__type{
+    min-width: 77px;
+    img:not(:last-child){
+      display: none;
+    }
+  }
+  .main-search__btn{
+    min-width: 55px;
   }
 }

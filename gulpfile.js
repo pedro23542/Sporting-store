@@ -3,7 +3,9 @@ let gulp = require('gulp'),
     sass = require('gulp-sass'),
     browserSync = require('browser-sync'),
     rename = require('gulp-rename'),
-    autoprefixer = require('gulp-autoprefixer');
+    autoprefixer = require('gulp-autoprefixer'),
+    imagemin = require('gulp-imagemin');
+ 
 
 let isDev = true;
 let isProd = !isDev;
@@ -44,6 +46,7 @@ gulp.task('html', function(){
 
 gulp.task('img', function(){
   return gulp.src('src/images/**/*.*')
+    .pipe(imagemin())
     .pipe(gulp.dest('dist/images'))
     .pipe(browserSync.reload({stream: true}))
 });

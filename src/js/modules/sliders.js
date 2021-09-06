@@ -1,5 +1,6 @@
 import Swiper from 'swiper/bundle';
 
+// mainSlider
 const sliders = () => {
   const mainSlider = new Swiper('.main-slider__container', {
     slidesPerView: 1,
@@ -37,7 +38,7 @@ const sliders = () => {
     });
   } catch (e) {}
  
-  
+ // brandsSlider 
   const brandsSlider = new Swiper('.brands-labels__container', {
     slidesPerView: 5,
     centeredSlidesBounds: true,
@@ -68,11 +69,36 @@ const sliders = () => {
     }
   });
 
+// productOne
   const productOne = new Swiper('.product-one__slider', {
     slidesPerView: 1,
     spaceBetween: 0,
     centeredSlides: true,
   });
+
+const sliderNavItems = document.querySelectorAll('.product-one__nav-item');
+const maxItems = 5;
+
+sliderNavItems.forEach((el, index) => {
+  el.setAttribute('data-index', index);
+
+  if (index + 1 > maxItems)  {          //if number of litle images is gratter then max number(maxItems) where index starts from 0;
+    document.querySelectorAll(`.product-one__nav-item:nth-child(n+${maxItems + 1})`).forEach(el => {el.style.display = 'none';});
+  }
+
+  el.addEventListener('click', (e) => {
+    const index = parseInt(e.currentTarget.dataset.index);
+
+    productOne.slideTo(index);
+  })
+});
+
+
+
+
+
+
+
 
 
 };
